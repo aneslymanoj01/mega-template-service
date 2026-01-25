@@ -28,6 +28,17 @@ jobs:
       - name: Run build with tests
         run: ./gradlew build
 
+      - name: Add coverage to PR
+        id: jacoco
+        uses: madrapps/jacoco-report@v1.6.1
+        if: github.event_name == 'pull_request'
+        with:
+          paths: |
+            ${{ github.workspace }}/build/reports/jacoco/test/jacocoTestReport.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          min-coverage-overall: 100
+          min-coverage-changed-files: 100
+
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         if: always()
