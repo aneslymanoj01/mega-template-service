@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  security-events: write
 
 jobs:
   build:
@@ -30,6 +31,7 @@ jobs:
         uses: actions/dependency-review-action@v4
         with:
           fail-on-severity: low
+          comment-summary-in-pr: always
 
       - name: Run build with tests
         run: gradle build
