@@ -48,6 +48,9 @@ dependencies {
     testImplementation 'org.testcontainers:junit-jupiter:1.21.4'
     testImplementation 'org.testcontainers:postgresql:1.21.4'
     testImplementation 'org.testcontainers:testcontainers:2.0.3'
+    
+    // Vulnerable dependency for testing (has known CVEs)
+    implementation 'org.apache.commons:commons-text:1.9'
 }
 
 tasks.named('test') {
