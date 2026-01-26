@@ -29,7 +29,7 @@ jobs:
       - name: Cache Dependency-Check data
         uses: actions/cache@v4
         with:
-          path: .gradle/dependency-check-data
+          path: ~/.gradle/dependency-check-data
           key: dependency-check-${{ hashFiles('**/build.gradle') }}
           restore-keys: dependency-check-
 

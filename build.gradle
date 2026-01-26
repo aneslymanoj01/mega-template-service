@@ -91,5 +91,4 @@ dependencyCheck {
     nvd {
         apiKey = System.getenv('NVD_API_KEY') ?: ''
     }
-    cacheDirectory = file('.gradle/dependency-check-data')
 }
