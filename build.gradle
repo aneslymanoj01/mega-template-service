@@ -4,7 +4,6 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.7'
     id 'com.diffplug.spotless' version '8.1.0'
     id 'jacoco'
-    id 'org.owasp.dependencycheck' version '10.0.4'
 }
 
 group = 'com.mega'
@@ -82,13 +81,5 @@ spotless {
     java {
         googleJavaFormat()
         target 'src/**/*.java'
-    }
-}
-
-dependencyCheck {
-    failBuildOnCVSS = 0
-    suppressionFile = 'dependency-check-suppressions.xml'
-    nvd {
-        apiKey = System.getenv('NVD_API_KEY') ?: ''
     }
 }
