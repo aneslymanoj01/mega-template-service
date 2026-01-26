@@ -1,0 +1,7 @@
+server:
+  port: 8180
+  servlet:
+    context-path: /mega-template-service
+spring:
+  application:
+    name: mega-template-service
