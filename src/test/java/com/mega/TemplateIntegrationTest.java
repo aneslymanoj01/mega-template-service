@@ -20,7 +20,7 @@ class TemplateIntegrationTest extends AbstractIntegrationTest {
   }
 
   @Test
-  void getWidgetById_ShouldReturnWidget_WhenIdAndAuthorMatches() throws Exception {
+  void getTemplate_ShouldReturnServiceStatus_WhenEndpointIsCalled() throws Exception {
     mockMvc
         .perform(get("/"))
         .andExpect(status().is2xxSuccessful())
