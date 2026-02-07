@@ -20,7 +20,7 @@ class TemplateIntegrationTest extends AbstractIntegrationTest {
   }
 
   @Test
-  void getTemplate_ShouldReturnServiceStatus_WhenEndpointIsCalled() throws Exception {
+  void getRootEndpoint_ShouldReturnServiceStatus() throws Exception {
     mockMvc
         .perform(get("/"))
         .andExpect(status().is2xxSuccessful())
